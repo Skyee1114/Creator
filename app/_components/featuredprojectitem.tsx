@@ -45,7 +45,6 @@ export function FeaturedProjectItem({featureTitle}: IProps) {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#174034] to-transparent"></div>
                 </div>
             </div>
-
             
             <div className='flex justify-end pt-4 pr-3'>
                 <Image src={Love} alt="love" className='w-10 h-10 transition-opacity duration-300 ease-in-out opacity-60 hover:opacity-100 z-10'/>

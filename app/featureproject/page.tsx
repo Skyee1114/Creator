@@ -8,26 +8,16 @@ import { FaTelegram } from "react-icons/fa";
 import { LogoIcon } from "@/assets/img";
 import { TabSection } from "./_components/tabsection";
 import { SimilarProjectItem } from "./_components/similarprojectitem";
-import { Slider1 } from "@/common/_components/slider1";
+import { Slider1 } from "../_components/slider1";
+import { IntroHeader } from "../_components/introheader";
 
 export default function FeatureProject() {
   return (
     <div>
-        <div className="bg-[url('./../assets/img/bgfeatureproject.jpg')] bg-white bg-cover bg-no-repeat">
-            <div className='m-auto container max-w-[1300px] py-24 relative'>
-                <p className='font-bold text-6xl leading-[80px] text-white w-[1100px]'>Revolutionizing Equity Crowdfunding in the Crypto Space</p>
-                <div className="flex justify-center items-center gap-2 absolute right-0 bottom-0 bg-white px-6 h-[60px]">
-                    <Link href="/" className="-pb-4 hover:border-b hover:border-[#838694]">
-                        <p className="font-medium text-[#838694]">Home</p>
-                    </Link>
-                    <p className="font-medium text-[#838694]">.</p>
-                    <p className="font-medium text-[#838694]">Revolutionizing Equity Crowdfunding in the Crypto Space</p>
-                </div>                                   
-            </div>   
-        </div>  
+        <IntroHeader title="Revolutionizing Equity Crowdfunding in the Crypto Space" content=""/>
 
         <div className="bg-[#f7f7f9]">
-            <div className="m-auto container max-w-[1300px] py-32 flex gap-16">
+            <div className="container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 py-32 flex gap-16">
                 <div className="flex flex-col gap-8">
                     <div className="bg-white">
                         <Image src={LogoIcon} alt="" className="w-[660px] h-[570px]"/>
@@ -38,18 +28,26 @@ export default function FeatureProject() {
                         <div className="flex items-center gap-4">
                             <p className="text-lg text-[#838694]">Share:</p>
                             <div className="flex gap-2">
-                                <div className="bg-[#00acee] p-1.5">
-                                    <FaTwitter className="text-white"/>
-                                </div>
-                                <div className="bg-[#0077b5] p-1.5">
-                                    <FaLinkedinIn className="text-white"/>
-                                </div>
-                                <div className="bg-[#7289da] p-1.5">
-                                    <FaDiscord className="text-white"/>
-                                </div>
-                                <div className="bg-[#0088cc] p-1.5">
-                                    <FaTelegram className="text-white"/>
-                                </div>                                
+                                <Link href="https://twitter.com/Creator_CRET" target="_blank">
+                                    <div className="bg-[#00acee] p-1.5">
+                                        <FaTwitter className="text-white"/>
+                                    </div>
+                                </Link>
+                                <Link href="https://www.linkedin.com/company/creator-cret" target="_blank">
+                                    <div className="bg-[#0077b5] p-1.5">
+                                        <FaLinkedinIn className="text-white"/>
+                                    </div>
+                                </Link>
+                                <Link href="https://discord.gg/jdUeq3Se3k" target="_blank">
+                                    <div className="bg-[#7289da] p-1.5">
+                                        <FaDiscord className="text-white"/>
+                                    </div>
+                                </Link>
+                                <Link href="https://t.me/creator_community" target="_blank">
+                                    <div className="bg-[#0088cc] p-1.5">
+                                        <FaTelegram className="text-white"/>
+                                    </div>  
+                                </Link>                   
                             </div>
                         </div>
                     </div>
@@ -107,10 +105,14 @@ export default function FeatureProject() {
             </div>            
         </div>
 
-        <TabSection />
+        <div className="bg-white">
+            <div className="container m-auto 2xl:max-w-[1300px] px-4 xs:px-0">
+                <TabSection />
+            </div>
+        </div>       
 
         <div className='bg-[#f7f7f9] py-32'>
-            <div className='flex flex-col m-auto container max-w-[1300px]'>
+            <div className='flex flex-col container m-auto 2xl:max-w-[1300px] px-4 xs:px-0'>
                 <p className='font-bold text-6xl text-[#174034] text-center pb-20'>Similar Projects</p>
                 <Slider1
                     projectList={[

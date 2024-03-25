@@ -18,30 +18,30 @@ export function TopNavbar() {
     )
 
     const navList2 = (
-        <ul className="text-white flex gap-10">
+        <ul className="text-white flex gap-3 xs:gap-4 sm:gap-10">
             <li>
-                <Link href="/" className='flex justify-between gap-4 items-center'>
+                <Link href="/preregister" className='flex justify-between gap-1 xs:gap-2 sm:gap-4 items-center'>
                     <FaRegUserCircle className='text-[#52F2A8] text-2xl'/>
-                    <p>Sign in or Register</p>
+                    <p>Pre-register</p>
                 </Link>
             </li>
             <li>
-                <Link href="/"  className='flex justify-between gap-4 items-center'>
+                <Link href="https://www.creat-or.io/"  className='flex justify-between gap-1 xs:gap-2 sm:gap-4 items-center'>
                     <FiPlus className='text-[#52F2A8] text-2xl'/>
-                    <p>Add Project</p>
+                    <p>Join Our ICO</p>
                 </Link>
             </li>      
-            <li>
+            <li className="hidden sm:block">
                 <IoSearchOutline className='text-[#52F2A8] text-2xl'/>
             </li>      
         </ul>
     )
 
     return (
-        <nav className="top-0 px-6 sm:px-0 bg-[#174034] z-[999]">
-            <div className="flex justify-between m-auto items-center container max-w-[1300px] py-3.5">                   
-                <div className="hidden lg:block">{navList1}</div>
-                <div className="hidden lg:block">{navList2}</div>
+        <nav className="bg-[#174034]">
+            <div className="flex justify-end sm:justify-between container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 py-2 md:py-3">  
+                <div className="hidden sm:block">{navList1}</div>
+                <div className="">{navList2}</div>
             </div>
         </nav>
     )

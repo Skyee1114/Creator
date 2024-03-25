@@ -1,6 +1,8 @@
 import Logo from './logo.svg';
 import LogoWhite from './logowhite.png';
 import LogoIcon from './logoicon.svg';
+import LogoIconWhite1 from './logoiconwhite1.png';
+import LogoIconWhite2 from './logoiconwhite2.png';
 import LinesCircle from './bglinescircle.png';
 import Intro1 from './intro1.jpg';
 import Intro2 from './intro2.jpg';
@@ -10,7 +12,6 @@ import Science from './science.png';
 import SocialCauses from './social.png';
 import Environmental from './environmental.png';
 import Design from './design.png';
-import LinesBenifit from './bgbenifit.png';
 import LinesTransparent from './bglinestransparent.png';
 import Feature1 from './feature1.jpg';
 import Feature2 from './feature2.jpg';
@@ -35,6 +36,8 @@ import News1 from './news1.jpg';
 import News2 from './news2.jpg';
 import News3 from './news3.jpg';
 import News4 from './news4.jpg';
+import News5 from './news5.jpg';
+import News6 from './news6.jpg';
 import InvestorAdvantageList from './investoradvantagelist.png';
 import InvestorBenifitList from './investorbenifitlist.png';
 import BusinessAdvantageList from './businessadvantagelist.png';
@@ -45,6 +48,8 @@ export {
   Logo,
   LogoWhite,
   LogoIcon,
+  LogoIconWhite1,
+  LogoIconWhite2,
   LinesCircle,
   Intro1,
   Intro2,
@@ -54,7 +59,6 @@ export {
   SocialCauses,
   Environmental,
   Design,
-  LinesBenifit,
   LinesTransparent,
   Feature1,
   Feature2,
@@ -79,6 +83,8 @@ export {
   News2,
   News3,
   News4,
+  News5,
+  News6,
   InvestorAdvantageList,
   InvestorBenifitList,
   BusinessAdvantageList,

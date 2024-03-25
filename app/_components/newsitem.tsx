@@ -2,26 +2,28 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import { FaRegUserCircle } from "react-icons/fa";
-import { FaRegComments } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
-import { News1, News2, News3, News4 } from '@/assets/img';
+import { News1, News2, News3, News4, News5, News6 } from '@/assets/img';
+import { newsdate_1, newsdate_2, newsdate_3, newsdate_4, newsdate_5, newsdate_6 } from '../_utils/newsdata'
 
 interface IProps {
-    date: string
+    date: string,
+    title: string,
 }
 
 interface ItemImages {
     [key: string]: StaticImageData;
 }
 
-export function NewsItem({date}: IProps) {
+export function NewsItem({date, title}: IProps) {
 
     const newsImages: ItemImages = {
-        'JANUARY 3, 2024': News1,
-        'JANUARY 6, 2024': News2,
-        'JANUARY 9, 2024': News3,
-        'JANUARY 12, 2024': News4,
+        [newsdate_1]: News1,
+        [newsdate_2]: News2,
+        [newsdate_3]: News3,
+        [newsdate_4]: News4,
+        [newsdate_5]: News5,
+        [newsdate_6]: News6,
     };
 
     const [isHovered, setIsHovered] = useState(false);
@@ -36,7 +38,7 @@ export function NewsItem({date}: IProps) {
 
     return (        
         <Link 
-            href="/" 
+            href={`/news/${date}`} 
             className={`flex flex-col text-xl relative`}  
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}           
@@ -48,22 +50,11 @@ export function NewsItem({date}: IProps) {
                 <div className='flex flex-col items-start gap-5 mx-8'>
                     <div className='bg-[#52F2A8]'>
                         <p className='font-bold text-white text-xs uppercase px-5 py-2'>{date}</p>
-                    </div>
-                    <div className='flex items-center gap-8'>
-                        <div className='flex items-center gap-2'>
-                            <FaRegUserCircle className="text-base text-[#52F2A8]"/>
-                            <p className='text-lg text-[#838694]'>by admin</p>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                            <FaRegComments className="text-base text-[#52F2A8]"/>
-                            <p className='text-lg text-[#838694]'>0 comments</p>
-
-                        </div>
-                    </div>
-                    <div>
-                        <p className="text-[#174034] font-bold text-2xl">A day in the life of entrepreneur & co-founders</p>
                     </div>                    
-                    <div className='transition-colors duration-300 ease-in-out bg-white hover:bg-[#52F2A8] p-5'>
+                    <div>
+                        <p className="text-[#174034] font-bold text-2xl">{title}</p>
+                    </div>                    
+                    <div className={`transition-colors duration-300 ease-in-out ${isHovered ? "bg-[#52F2A8]" : "bg-white"} p-5`}>
                         <GoArrowRight className="text-2xl text-[#174034]" />
                     </div>
                 </div>       

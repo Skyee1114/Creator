@@ -51,8 +51,8 @@ export function CategoryItem({ itemTitle }: IProps) {
 
     return (
         <Link
-            href="/"
-            className={`flex justify-center w-52 h-52 bg-white text-xl relative`}
+            href={`/marketsectors#${itemTitle}`}
+            className="flex justify-center w-52 h-52 bg-white text-xl relative"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
@@ -66,6 +66,5 @@ export function CategoryItem({ itemTitle }: IProps) {
             </div>
             <span className="font-medium text-center text-[#174034] absolute bottom-12 left-1/2 transform -translate-x-1/2">{itemTitle}</span>
         </Link>
-
     );
 };

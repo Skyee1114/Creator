@@ -4,7 +4,7 @@ import { InvestorAdvantageList, InvestorBenifitList } from "@/assets/img";
 export default function InvestorAdvantage() {
     return (
         <div className='bg-white'>
-            <div className="m-auto container max-w-[1300px] py-24">
+            <div className="container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 py-24">
                 <div className="flex flex-col items-center justify-center gap-4">
                     <p className="font-bold text-4xl text-[#174034]">Empowering the Crypto Community:</p>
                     <p className="font-bold text-6xl text-[#174034]">A Revolutionary Crowdfunding Platform</p>
@@ -26,7 +26,7 @@ export default function InvestorAdvantage() {
                 </div>                
             </div>
 
-            <div className="m-auto container max-w-[1300px] py-24">
+            <div className="container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 py-24">
                 <Image 
                     src={InvestorBenifitList} 
                     alt="" 

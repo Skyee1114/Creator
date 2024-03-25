@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FiCheckCircle } from "react-icons/fi";
+import { PiMedal } from "react-icons/pi";
 import { Logo, LogoIcon, LogoWhite, LinesCircle, LinesTransparent, Whitepaper } from "@/assets/img";
 import { IntroButton } from "./_components/introbutton";
 import { JoinButton } from "./_components/joinbutton";
@@ -11,24 +12,27 @@ import { CategoryItem } from "./_components/categoryitem";
 import { FeaturedProjectItem } from "./_components/featuredprojectitem";
 import { ExploreProjectItem } from "./_components/exploreprojectitem";
 import { TestimonialItem } from "./_components/testimonialitem";
-import { Slider1 } from "@/common/_components/slider1";
+import { Slider1 } from "./_components/slider1";
 import { Slider2 } from "./_components/slider2";
 import { TeamMember } from "./_components/teammember";
 import { NewsItem } from "./_components/newsitem";
+import { newsdate_1, newsdate_2, newsdate_3, newsdate_4, newsdate_5, newsdate_6 } from './_utils/newsdata'
 
 export default function Home() {
     return (
         <div>
             <div className="bg-[url('./../assets/img/bgintro.png')] bg-white bg-cover bg-no-repeat">
-                <div className='m-auto container max-w-[1300px] py-32'>
+                <div className='container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 py-32'>
                     <div className='flex justify-between items-center'>
                         <div className='flex flex-col items-start gap-12'>
-                            <div className='flex items-end gap-2 border-b-4 border-[#52F2A8]'>
-                                <Image src={Logo} alt="" className='w-[150px]'/>
-                                <p className='font-bold text-4xl text-[#174034] pb-0.5 '>the Future Web 3</p>
+                            <div className='flex items-end gap-2 border-b-2 border-[#52F2A8]'>
+                                <Image src={Logo} alt="" className='w-[140px]'/>
+                                <p className='text-3xl text-[#174034] pb-0.5 '>The Future of Web 3</p>
                             </div>                        
                             <p className='font-bold text-8xl text-[#174034]'>Blockchain P2P Crowdfunding</p>
-                            <IntroButton />
+                            <Link href="/preregister">
+                                <IntroButton />
+                            </Link>                            
                         </div>
                         <Image src={LogoIcon} alt="" />
                     </div>
@@ -37,7 +41,7 @@ export default function Home() {
 
             <div className="flex items-center justify-center bg-[#174034] relative">
                 <Image src={LinesCircle} alt="" className=''/>
-                <div className='m-auto container max-w-[1300px] absolute'> 
+                <div className='container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 absolute'> 
                     <div className='flex flex-row justify-between gap-20 '>
                         <div className='flex flex-col w-[500px]'>
                             <div className='flex gap-2 items-center'>
@@ -45,7 +49,7 @@ export default function Home() {
                                 <p className='text-xl text-white'>Explore the next big thing</p>
                             </div>
                             <p className='font-bold text-6xl text-white pt-3'>Top Categories</p>
-                            <p className='text-xl text-white leading-[38px] pt-14'>
+                            <p className='text-base text-white leading-[38px] pt-12'>
                                 Explore our top categories and discover exciting opportunities that align with your investment profile. Delve into a curated selection of innovative projects across diverse sectors, each offering unique prospects for growth and impact. Whether you're passionate about technology, sustainability, or creative endeavour’s, find your next investment venture with us.
                             </p>
                         </div>
@@ -63,7 +67,7 @@ export default function Home() {
 
             <div className='bg-[#1b1f2e] relative'>
                 <div className="relative bg-cover bg-no-repeat">
-                    <div className="flex items-center m-auto container max-w-[1300px] relative z-10">
+                    <div className="flex items-center container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 relative z-10">
                         <div className='flex flex-col items-center gap-8 py-32 text-white'>
                             <p className="font-bold text-6xl ">Maximize Your Impact:</p>
                             <div className="flex gap-3">
@@ -71,7 +75,7 @@ export default function Home() {
                                 <Image src={LogoWhite} alt="" className="w-40"/>
                             </div>
                             <p className="text-2xl leading-[40px]">Holding $CRET tokens offers distinct advantages on the Creat-or P2P crowdfunding site, enhancing both the investment experience and potential returns. $CRET token holders enjoy privileged access to exclusive project previews, ensuring early investment opportunities. Additionally, they benefit from reduced transaction fees, increasing the efficiency and cost-effectiveness of investments. Moreover, token holders are eligible for rewards and incentives, further enriching the investment landscape on Creat-or, making it a more attractive and engaging platform for those committed to exploring the frontiers of blockchain and innovative funding.</p>
-                            <Link href="https://www.creat-or.io/" target="_blank" className="pt-8">
+                            <Link href="https://www.creat-or.io/" className="pt-8">
                                 <JoinButton />
                             </Link>                        
                         </div>                    
@@ -80,29 +84,34 @@ export default function Home() {
             </div>
 
             <div className='bg-white'>
-                <div className="flex items-center justify-center m-auto container max-w-[1300px] bg-[#52F2A8] relative">
-                    <Image src={LinesTransparent} alt="" className=''/>
-                    <div className='absolute'> 
-                        <div className='flex flex-row justify-between items-center gap-12 '>
-                            <div className='flex flex-col gap-12 w-[600px]'>
-                                <div className='flex flex-col gap-4'>
-                                    <p className='font-bold text-4xl text-[#174034]'>Empower Your Dream:</p>
-                                    <p className='font-normal text-xl text-[#174034]'> Fundraising for Innovators and Entrepreneurs</p>
-                                </div>
-                                <div className='flex flex-col gap-4'>
-                                    <p className='font-bold text-4xl text-[#174034]'>Unleash Your Venture's Potential:</p>
-                                    <p className='font-normal text-xl text-[#174034]'>Join our platform to connect with a global network of investors eager to support groundbreaking projects. Turn your vision into reality and elevate your business to new heights.</p>
-                                </div>         
+                <div className="flex items-center justify-center container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 bg-[#52F2A8] py-24 relative">
+                    {/* <Image src={LinesTransparent} alt="" className=''/> */}
+                    <div className="bg-[url('./../assets/img/bglinestransparent.png')]"> 
+                        <div className='flex flex-col items-center gap-12'>
+                            <div className='flex flex-col items-center gap-4 px-16'>
+                                <p className='font-bold text-4xl text-[#174034]'>Revolutionize Your Equity Crowdfunding with Creat'or:</p>
+                                <p className='font-normal text-xl text-[#174034]'>Never Lock Up Your Investments Again. Welcome to Creat'or, where the future of investment freedom is now. Forget the old days of equity crowdfunding, where your funds could be tied up for years awaiting a business's exit or sale. Creat'or introduces a groundbreaking approach with blockchain smart contracts, giving you the agility to sell your equity stake whenever you choose. Our platform ensures you're no longer waiting on the sidelines for liquidity events; instead, you have the control to offer your shareholding for sale on the Creat'or market at any time. Dive into an investment experience that marries immediate liquidity with unmatched flexibility and security. Join the Creat'or community, where your investment potential is unleashed, and you hold the power to cash out on your terms. Transform your investment strategy today. Click to see how Creat'or is changing the game for investors everywhere.</p>
                             </div>
-                            <FoundButton />
-                        </div>
+                            <Link href="/preregister">
+                                <FoundButton />
+                            </Link>  
+                        </div> 
                     </div>          
                 </div>
             </div>   
 
-            <div className='bg-white'>
-                <div className='flex flex-col m-auto container max-w-[1300px]'>
-                    <p className='font-bold text-6xl text-[#174034] text-center pt-32 pb-20'>Featured Projects</p>
+            <div className='bg-white'>                
+                <div className='flex flex-col container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 pt-32'>
+                    <div className="bg-[#174034]">
+                        <div className="flex flex-col items-center py-12">
+                            <div className="flex items-center gap-4 pb-4">
+                                <PiMedal className="text-4xl text-[#52F2A8]"/>
+                                <p className='font-bold text-2xl text-white text-center'>TOP FEATURED PROJECT</p>
+                            </div>
+                            <Image src={LogoWhite} alt="" className="w-40"/>
+                        </div>
+                    </div>
+                    <p className='font-bold text-6xl text-[#174034] text-center pt-20 pb-20'>Featured Projects</p>
                     <Slider1
                         projectList={[
                             { project: <FeaturedProjectItem featureTitle="Technology" /> },
@@ -110,12 +119,12 @@ export default function Home() {
                             { project: <FeaturedProjectItem featureTitle="Fashion" /> },
                             { project: <FeaturedProjectItem featureTitle="Design"/> },
                         ]}
-                    />
-                </div>   
+                    />                    
+                </div>                
             </div>    
             
             <div className='bg-white'>
-                <div className='flex justify-between gap-24 m-auto container max-w-[1300px] pt-40'>
+                <div className='flex justify-between gap-24 container m-auto 2xl:max-w-[1300px] px-4 xs:px-0  pt-40'>
                     <Image src={Whitepaper} alt="" />
                     <div className='flex flex-col'>
                         <div className='flex gap-2 items-center'>
@@ -162,7 +171,7 @@ export default function Home() {
             </div>
 
             <div className='bg-white py-32'>
-                <div className='flex flex-col m-auto container max-w-[1300px]'>
+                <div className='flex flex-col container m-auto 2xl:max-w-[1300px] px-4 xs:px-0'>
                     <p className='font-bold text-6xl text-[#174034] text-center pb-20'>Explore Projects</p>
                     <Slider1
                         projectList={[
@@ -178,16 +187,18 @@ export default function Home() {
             </div>
            
             <div className=" bg-[#1b1f2e] w-full h-full bg-fixed bg-cover bg-no-repeat">  
-                <div className="m-auto container max-w-[1300px]">
+                <div className="container m-auto 2xl:max-w-[1300px] px-4 xs:px-0">
                     <div className='flex flex-col items-center py-24'>
                         <p className='w-[1000px] font-bold text-6xl leading-[80px] text-white text-center pt-4 pb-12'>Together We can Bring More Creativity into the World</p>
-                        <CreativityButton />
+                        <Link href="/preregister">
+                            <CreativityButton />
+                        </Link>                        
                     </div>                
                 </div>    
             </div>    
             
             <div className='bg-white'>
-                <div className='m-auto container max-w-[1300px] pt-32'> 
+                <div className='container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 pt-32'> 
                     <div className='flex justify-between'>
                         <div className='flex flex-col gap-6'>
                             <div className='flex gap-2 items-center'>
@@ -235,7 +246,7 @@ export default function Home() {
 
             <div className='bg-white py-32'>
                 <div className="bg-[url('./../assets/img/bgteam.jpg')] bg-no-repeat">
-                    <div className='m-auto container max-w-[1300px] pt-28'>
+                    <div className='container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 pt-28'>
                         <div className='flex flex-col items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div className='w-1.5 h-1.5 bg-[#52F2A8]'></div>
@@ -253,7 +264,7 @@ export default function Home() {
             </div>  
 
             <div className="bg-[#174034] bg-cover bg-no-repeat"> 
-                <div className="m-auto container max-w-[1300px]">
+                <div className="container m-auto 2xl:max-w-[1300px] px-4 xs:px-0">
                     <div className='flex flex-col gap-12 items-center py-24'>
                         <div className='flex items-end gap-4'>
                             <Image src={LogoWhite} alt="" className='w-[140px]'/>
@@ -267,16 +278,48 @@ export default function Home() {
             </div> 
 
             <div className='bg-white py-32'>
-                <div className='flex flex-col m-auto container max-w-[1300px]'>
+                <div className='flex flex-col container m-auto 2xl:max-w-[1300px] px-4 xs:px-0'>
                     <div className='flex flex-col items-center'>                    
                         <p className='font-bold text-6xl text-[#174034] text-center pt-4 pb-20'>Latest Updates</p>
                     </div>                
                     <Slider1
                         projectList={[
-                            { project: <NewsItem date="JANUARY 3, 2024" /> },
-                            { project: <NewsItem date="JANUARY 6, 2024" /> },
-                            { project: <NewsItem date="JANUARY 9, 2024" /> },
-                            { project: <NewsItem date="JANUARY 12, 2024"/> },
+                            { 
+                                project: <NewsItem 
+                                date={newsdate_1}
+                                title="India's Strategic Fintech Boost with the ADB..."
+                                /> 
+                            },
+                            { 
+                                project: <NewsItem 
+                                date={newsdate_2}
+                                title="Crowdfunding Market's Explosive Growth Forecast"
+                                /> 
+                            },
+                            { 
+                                project: <NewsItem 
+                                date={newsdate_3}
+                                title="Bitcoin Halving's Impact on the Crypto Market"
+                                /> 
+                            },
+                            { 
+                                project: <NewsItem 
+                                date={newsdate_4}
+                                title="Redefining Crowdfunding: Creat'or's Revolutionary..."
+                                /> 
+                            },
+                            { 
+                                project: <NewsItem 
+                                date={newsdate_5}
+                                title="Bridging Dreams and Reality: How Creat'or Revolutionize..."
+                                /> 
+                            },
+                            { 
+                                project: <NewsItem 
+                                date={newsdate_6}
+                                title="Empowering Startups: The Unmatched Flexibility of..."
+                                /> 
+                            },
                         ]}
                     />
                 </div>    
@@ -284,7 +327,7 @@ export default function Home() {
 
             <div className='bg-white relative'>
                 <div className="bg-[url('./../assets/img/bgsubscribe.jpg')] bg-fixed"> 
-                    <div className="m-auto container max-w-[1300px] py-24">
+                    <div className="container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 py-24">
                         <p className='font-bold text-6xl leading-[80px] text-[#174034] text-center pb-16'>Pre-register now and be the first to get access to our Platform upon launch</p>            
                         <div className='flex justify-center gap-5'>
                             <input

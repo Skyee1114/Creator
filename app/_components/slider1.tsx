@@ -32,7 +32,8 @@ export function Slider1({projectList}: IProps) {
             onMouseLeave={handleMouseLeave}
         >
             <div 
-                className={`transition-all duration-500 ease-in-out ${isHovered ? "opacity-100" : "opacity-0"} absolute left-60 px-3 py-3 bg-white hover:bg-[#52F2A8] text-[#174034] hover:text-white border-[1px] border-inherit shadow-md z-10 cursor-pointer`}
+                className={`transition-all duration-500 ease-in-out ${isHovered ? "opacity-100" : "opacity-0"} absolute py-3 bg-white hover:bg-[#52F2A8] text-[#174034] hover:text-white border-[1px] border-inherit shadow-md z-10 cursor-pointer`}
+                style={{left: '240px', paddingLeft: '12px', paddingRight: '12px'}}
                 onClick={() => swiperRef.current.slidePrev()}
             >
                 <IoIosArrowBack className="w-7 h-7" />
@@ -66,9 +67,9 @@ export function Slider1({projectList}: IProps) {
                 }
             </Swiper>
             <div 
-                className={`transition-all duration-500 ease-in-out ${isHovered ? "opacity-100" : "opacity-0"} absolute right-60 px-3 py-3 bg-white hover:bg-[#52F2A8] text-[#174034] hover:text-white border-[1px] border-inherit shadow-md z-10 cursor-pointer`}
+                className={`transition-all duration-500 ease-in-out ${isHovered ? "opacity-100" : "opacity-0"} absolute py-3 bg-white hover:bg-[#52F2A8] text-[#174034] hover:text-white border-[1px] border-inherit shadow-md z-10 cursor-pointer`}
+                style={{right: '240px', paddingLeft: '12px', paddingRight: '12px'}}
                 onClick={() => swiperRef.current.slideNext()}
-
             >
                 <IoIosArrowForward className="w-7 h-7" />
             </div>

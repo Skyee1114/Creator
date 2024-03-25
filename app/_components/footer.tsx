@@ -14,8 +14,8 @@ export function Footer() {
     return (
         <div className="bg-[#1b1f2e]">
             <div className="bg-[url('./../assets/img/bgfooter.png')]">
-                <div className='m-auto container max-w-[1300px] pt-28'> 
-                    <div className='grid grid-cols-4 gap-12'>
+                <div className='container m-auto 2xl:max-w-[1300px] px-4 xs:px-0 pt-28'> 
+                    <div className='grid grid-cols-2 lg:grid-cols-4 gap-12'>
                         <div className='flex flex-col justify-between gap-4'>
                             <Image src={LogoWhite} alt="" className='w-40'/>
                             <div className='flex flex-col gap-8'>
@@ -45,23 +45,36 @@ export function Footer() {
                             </div>                            
                         </div>
                         <div className='flex flex-col justify-between gap-8'>
-                            <p className='font-bold text-2xl text-white'>Company</p>
+                            <p className='font-bold text-2xl text-white'>Pages</p>
                             <div className='flex flex-col gap-2'>
-                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>About us</p>
-                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Latest events</p>
-                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>How It Works</p>
-                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>News & articles</p>
-                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Contact us</p>
+                                <Link href="/marketsectors">
+                                    <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Market sectors</p>
+                                </Link>
+                                <Link href="/preregister">
+                                    <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Pre register</p>
+                                </Link>
+                                <Link href="/investoradvantage">
+                                    <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Investor advantages</p>
+                                </Link>
+                                <Link href="/businessadvantage">
+                                    <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Advantages for business</p>
+                                </Link>
+                                <Link href="/news">
+                                    <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>News</p>
+                                </Link>
+                                <Link href="/contact">
+                                    <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Contact us</p>
+                                </Link>
                             </div>
                         </div>
                         <div className='flex flex-col justify-between gap-8'>
-                            <p className='font-bold text-2xl text-white'>Fundraising</p>
+                            <p className='font-bold text-2xl text-white'>Market Sectors</p>
                             <div className='flex flex-col gap-2'>
-                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Education</p>
-                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Design</p>
-                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Film & Video</p>
                                 <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Technology</p>
                                 <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Games</p>
+                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Science</p>
+                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Social Causes</p>
+                                <p className='text-lg leading-8 transition-colors duration-300 ease-in-out text-[#8d91a2] hover:text-white cursor-pointer'>Environmental</p>
                             </div>
                         </div>
                         <div className='flex flex-col justify-between gap-8'>

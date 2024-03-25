@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { TopNavbar } from "./_components/topnavbar";
 import { StickyNavbar } from "./_components/stickynavbar";
 import { Footer } from "./_components/footer";
 import "./globals.css";
 
+const inter = Inter({ subsets: ["latin"] });
+
 const siteName = "Creator Platform";
-const description =
-  "Introducing various basic patterns using Next.js' app router with simplified code.";
+const description = "Introducing various basic patterns using Next.js' app router with simplified code.";
 
 export const metadata: Metadata = {
   title: siteName,
@@ -21,13 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         <TopNavbar />
         <StickyNavbar />
         <div>
           {children}
         </div>
-        <Footer />        
+        <Footer />
       </body>
     </html>
   );
